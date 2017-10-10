@@ -1,0 +1,18 @@
+20171010
+Repaso de operaciones de git
+
+configuracion inicial:
+git config --global user.name fraarr
+git config --global user.email 1dam.fgomez@institutoserpis.com
+git config --global push.default simple
+
+clonado:
+git clone https://github.com/arreal/ed.git
+
+nueva versión:
+git add diario.txt (marca el fichero diario.txt)
+git commit -m "Resumen motivo de la nueva versión" (incluye los marcados)
+
+publicación en remoto:
+git push
+
