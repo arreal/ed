@@ -11,19 +11,24 @@ public class Adivina {
 		
 		System.out.println("Numero aleatorio="+numeroAleatorio);
 		Scanner scanner = new Scanner (System.in);
-		System.out.println("Adivina el numero (entre 1 y 1000): ");
 		
+		int contadorDeIntentos = 1;
+				
+		System.out.printf("Adivina el numero (entre 1 y 1000) [intento %d] : ", contadorDeIntentos);
+
 		String numero = scanner.nextLine();
 		int numeroIntroducido = Integer.parseInt(numero); //parse es un convertidor a numero entero
 		while (numeroIntroducido != numeroAleatorio) {
+			contadorDeIntentos++;
 			if (numeroAleatorio < numeroIntroducido)
-				System.out.println("Es menor que ese. Vuelve a intentarlo: ");
+				System.out.printf("Es menor que ese. Vuelve a intentarlo: [intento %d] : ", contadorDeIntentos);
 			else
-				System.out.print("Es mayor que ese. Vuelve a intentarlo: ");
+				System.out.printf("Es mayor que ese. Vuelve a intentarlo: [intento %d] : ", contadorDeIntentos);
 			numero=scanner.nextLine();
 			numeroIntroducido = Integer.parseInt(numero);
 		}
-		System.out.println("Enhorabuena!! Has Acertado!!");
+		System.out.printf("Enhorabuena!! Has Acertado en %s %s. \n",
+				contadorDeIntentos, contadorDeIntentos == 1? "intento" : "intentos");
 		//simbologia; != / distinto de
 	}
 
